@@ -1,0 +1,7 @@
+# Grid settings
+rmin = 1.0          # [au] grid starting point
+rmax = 10.0         # [au] grid ending point
+nr = 3000           # [1]  number of grid points
+
+# Bound states settings
+bound_ne = 1000      # [1] sparcing number
