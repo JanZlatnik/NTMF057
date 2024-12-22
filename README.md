@@ -39,7 +39,7 @@
   - graf [`nr_graph.pdf`](Graphs/nr_graph.pdf) zobrazuje stejný test pro fixní `rmax=12 au` v závislosti na počtu bodů gridu \
     => přesnost energií vázaných stavů je silně závislá na použitém počtu bodů grafu, přičemž můžeme říci, že řád metody by měl odpovídat řádu metody použité na řešení diferenciální rovnice - Runge-Kutta 4. řádu - neboť zvýšení počtu bodů o jeden řád odpovídá poklesu rozdílu energií o zhruba 4 řády
   - graf  [`RK_test.pdf`](Graphs/RK_test.pdf) zobrazuje testování Runge-Kutteových metod na řešení LHO na intervalu `[0,20]` s počátečními podmínkami nastavenými tak, aby přesné řešení odpovídalo `A(t)=cos(t)`
-  - graf [`spline_interpolation.pdf`](Graphs/spline_interpolation.pdf) zobrazuje vliv počtu podů použitých při interpolaci přirozenými kubickými spliny na rozdíl energií základního stavu\
+  - graf [`spline_interpolation.pdf`](Graphs/spline_interpolation.pdf) zobrazuje vliv počtu bodů použitých při interpolaci kubickými spliny na rozdíl energií základního stavu\
     => zde se nepřesnost také jeví jako `O(1/N^4)`, což by odpovídalo nepřesnosti kubického splinu? Maximální počet použitých bodů pro spline je řádu `10e3`, přičemž výpočet byl vždy prováděň na gridu s počtem bodů `10e4`
 
 
