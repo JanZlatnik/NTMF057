@@ -1,23 +1,23 @@
 # Zápočtový program z NTMF057 Numerické metody pro teoretické fyziky I
 ## Úloha 2: vlastní vázané stavy radiálního problému
 
-### Složka [src](src/)
-  - modul [core.rs](src/core.rs) -> obsahuje základní fyzikální konstanty a inicializace nastavení
-  - modul [math.rs](src/math.rs) -> zde jsou naprogramovány základní metody jako tvorba gridu, integrace, Runge-Kutte metoda, interpolace přirozeným kubickým splinem
-  - modul [radialSE.rs](src/radialSE.rs) -> zde je metoda na řešení radiálního problému pomocí metody střelby
-  - modul [main.rs](src/main.rs) -> špouští jednotlivé metody a ukládá data do souborů
+### Složka [`src`](src/)
+  - modul [`core.rs`](src/core.rs) -> obsahuje základní fyzikální konstanty a inicializace nastavení
+  - modul [`math.rs`](src/math.rs) -> zde jsou naprogramovány základní metody jako tvorba gridu, integrace, Runge-Kutte metoda, interpolace přirozeným kubickým splinem
+  - modul [`radialSE.rs`](src/radialSE.rs) -> zde je metoda na řešení radiálního problému pomocí metody střelby
+  - modul [`main.rs`](src/main.rs) -> špouští jednotlivé metody a ukládá data do souborů
 
 ### Aplikace
   - v hlavní složce je zkompolovaná aplikace [Radial_problem.exe](Radial_problem.exe), která ke spušnění vyžaduje přítomnost [settings.toml](settings.toml), ve kterém je uloženo nastavení, výstupy pak vypisuje do složek Task 1, Task 3 a Test
   - data ve složkách Task 1, Task 2 a Test byly spuštěny s příloženým nastavením
 
-### složka [Task 1](Task 1/) obsahuje řešení první úlohy
-  - [RK_test.txt](RK_test.txt) obsahuje test konvergence Runge-Kutteových metod
-  - [N2_potential.txt](N2_potential.txt) obsahuje výpis potenciálu pro kontrolu
-  - [energies.txt](energies.txt) obsahuje vlastní energie pro 'l=0' a 'l=10'
-  - [energies_control.txt](energies_control.txt) obsahuje tytéž energie spočítané rozvojem do Fourierovy báze pro kontrolu
-  - [sign_function.txt](sign_function.txt) obsahuje znaménko asymtotiky vlnové funkce propagované pomocí metody střelby jako kontrolní výstup při výpočtu pro 'l=0'
-  - [eigenfunctions0.txt](eigenfunctions0.txt) a [eigenfunctions10.txt](eigenfunctions10.txt) obsahují vlastní vlnové funkce pro 'l=0' a 'l=10'
+### složka [Task 1](Task1/) obsahuje řešení první úlohy
+  - [`RK_test.txt`](RK_test.txt) obsahuje test konvergence Runge-Kutteových metod
+  - [`N2_potential.txt`](N2_potential.txt) obsahuje výpis potenciálu pro kontrolu
+  - [`energies.txt`](energies.txt) obsahuje vlastní energie pro `l=0` a `l=10`
+  - [`energies_control.txt`](energies_control.txt) obsahuje tytéž energie spočítané rozvojem do Fourierovy báze pro kontrolu
+  - [`sign_function.txt`](sign_function.txt) obsahuje znaménko asymtotiky vlnové funkce propagované pomocí metody střelby jako kontrolní výstup při výpočtu pro `l=0`
+  - [`eigenfunctions0.txt`](eigenfunctions0.txt) a [`eigenfunctions10.tx`](eigenfunctions10.txt) obsahují vlastní vlnové funkce pro `l=0` a `l=10`
 
 · složka Task 3 obsahuje řešení třetí úlohy
   - interpolation.txt obsahuje potenciál a jeho aproximace přirozeným kubickým splinem s různým počtem bodů
