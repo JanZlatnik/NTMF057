@@ -156,14 +156,20 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let mut file = File::create("Task 3/interpolation.txt")?;
     let mut file_e = File::create("Task 3/interpolation_energies.txt")?;
+    let mut file_dif = File::create("Task 3/interpolation_energies_difference.txt")?;
+    let mut file_dif0 = File::create("Task 3/interpolation_ground_state_difference.txt")?;
     write!(file, "{:<3}{:>17}{:>20}", "#", "R [au]", "V(R) [eV]")?;
     write!(file_e, "{:<3}{:>1}{:>20}", "#", "n", "E_n")?;
+    write!(file_dif, "{:<3}{:>1}", "#", "n")?;
+    writeln!(file_dif0, "{:<3}{:>17}{:>20}", "#", "n","ΔE_0")?;
     for n in n_points.iter() {
-        write!(file, "{:>20}", &format!("s{}(R) [eV]",n))?;
-        write!(file_e, "{:>20}", &format!("E_n s{} [eV]",n))?;
+        write!(file, "{:>20}", &format!("s{}(R) [a.u.]",n))?;
+        write!(file_e, "{:>20}", &format!("E_n s{} [a.u.]",n))?;
+        write!(file_dif, "{:>20}", &format!("ΔE_n s{} [a.u.]",n))?;
     }
     writeln!(file)?;
     writeln!(file_e)?;
+    writeln!(file_dif)?;
 
     for (j,&x) in r.points.iter().enumerate() {
         write!(file, "{:20.12E}", x) ?;
@@ -177,15 +183,28 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     for j in 0..energies0.len() {
         write!(file_e, "{:4.0}", j)?;
+        write!(file_dif, "{:4.0}", j)?;
         write!(file_e, "{:20.12E}", energies0[j])?;
         for i in 0..n_splines {
-            if j < energies[i].len() {write!(file_e, "{:20.12E}", energies[i][j])?}
-            else {write!(file_e, "{:>20}", "NaN")?};
+            if j < energies[i].len() {
+                write!(file_e, "{:20.12E}", energies[i][j])?;
+                write!(file_dif, "{:20.12E}", (energies[i][j]-energies0[j]).abs())?;
+            }
+            else {write!(file_e, "{:>20}", "NaN")?;write!(file_dif, "{:>20}", "NaN")?};
         }
         writeln!(file_e)?;
+        writeln!(file_dif)?;
     }
-
     console("Data successfully written to Task 3/interpolation_energies.txt");
+    console("Data successfully written to Task 3/interpolation_energies_difference.txt");
+
+    for i in 0..n_splines {
+        write!(file_dif0, "{:20.0}", n_points[i])?;
+        write!(file_dif0, "{:20.12E}", (energies[i][0]-energies0[0]).abs())?;
+        writeln!(file_dif0)?;
+    }
+    console("Data successfully written to Task 3/interpolation_ground_state_difference.txt");
+
 
 
     // This code was used for testing purposes and is currently commented out.

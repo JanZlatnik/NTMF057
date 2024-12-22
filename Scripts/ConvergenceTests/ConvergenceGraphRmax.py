@@ -5,7 +5,7 @@ from matplotlib.ticker import MaxNLocator, AutoMinorLocator
 import os
 import toml
 
-title = r'Grid points convergence test'
+title = r'Grid length convergence test'
 
 SMALL_SIZE = 14
 MEDIUM_SIZE = 18
@@ -79,12 +79,12 @@ def plot_convergence(differences, last_run, settings_dict, legend_key="rmax", ou
     fig, ax = plt.subplots(figsize=(SIZE, SIZE))
 
     xmax = settings_dict[last_run][legend_key] if legend_key in settings_dict[last_run] else "N/A"
-    legend_title = rf"$n_r = {xmax}$"
+    legend_title = rf"$r_\mathrm{{max}} = {xmax}\,\mathrm{{au}}$"
 
     for run, (x, diff) in differences.items():
         run_number = int(run.split("#")[1])
         value = settings_dict[run].get(legend_key, "N/A")
-        label = rf"${value}$"
+        label = rf"${value}\,\mathrm{{au}}$"
         ax.semilogy(x, diff, '-', label=label)
 
     ax.set_xlabel(r'$n$')
@@ -100,8 +100,8 @@ def plot_convergence(differences, last_run, settings_dict, legend_key="rmax", ou
     plt.show()
 
 def main():
-    convergence_test_path = r"D:\\Univerzita\\Numerické metody\\Radial_problem\\Scripts\\ConvergenceTestNR"
-    legend_key = "nr"
+    convergence_test_path = r"/Scripts/ConvergenceTests/ConvergenceTestRmax"
+    legend_key = "rmax"
 
     print("Loading energy data...")
     energies_dict, settings_dict = load_energies(convergence_test_path)
@@ -110,7 +110,7 @@ def main():
     differences, last_run = calculate_differences(energies_dict)
 
     print("\nGenerating plot...")
-    plot_convergence(differences, last_run, settings_dict, legend_key, "nr_graph")
+    plot_convergence(differences, last_run, settings_dict, legend_key, "rmax_graph")
 
 if __name__ == "__main__":
     main()
