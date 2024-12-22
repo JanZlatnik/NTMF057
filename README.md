@@ -25,7 +25,7 @@
   - [`interpolation_energies_difference.txt`](interpolation_energies_difference.txt) obsahuje rozdíly vlastních energií pro l=0 spočítané pomocí metody střelby mezi přesným potenciálem a aproximací spliny
   - [`interpolation_ground_state_difference.txt`](interpolation_ground_state_difference.txt) obsahuje rozdíl energie základního stavu v závislosti na počtu použitých bodů pro interpolaci splinem
 
-### Složka [`Scripts](Scripts/) obsahuje python skripty pro analýzu konvergence a tvorbu grafů
+### Složka [`Scripts`](Scripts/) obsahuje python skripty pro analýzu konvergence a tvorbu grafů
   - skript [`ConvergenceTest.py`](ConvergenceTest.py) vytváří vždy složku s určitým nastavením a pak v ní spustí aplikaci
   - skripty [`ConvergenceGraphNR.py`](ConvergenceGraphNR.py) a [`ConvergenceGraphRmax.py`](ConvergenceGraphRmax.py) z jednotlivých běhů sezbírají data z energies.txt pro l=0, porovnají je a vytvoří z nich grafy
   - skripty [`RungeKutta.py`](RungeKutta.py) a [`spline.py`](spline.py) pouze vytvářejí grafy ze souborů [`RK_test.txt`](RK_test.txt) a [`interpolation_ground_state_difference.txt`](interpolation_ground_state_difference.txt)
