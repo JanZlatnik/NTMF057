@@ -1,13 +1,14 @@
-Zápočtový program z NTMF057 Numerické metody pro teoretické fyziky I
-Úloha 2: vlastní vázané stavy radiálního problému
+# Zápočtový program z NTMF057 Numerické metody pro teoretické fyziky I
+## Úloha 2: vlastní vázané stavy radiálního problému
 
-· složka scr obsahuje
-  - modul core.rs -> obsahuje základní fyzikální konstanty a inicializace nastavení
-  - modul math.rs -> zde jsou naprogramovány základní metody jako tvorba gridu, integrace, Runge-Kutte metoda, interpolace přirozeným kubickým splinem
-  - modul radialSE.rs -> zde je metoda na řešení radiálního problému pomocí metody střelby
-  - modul main.rs -> špouští jednotlivé metody a ukládá data do souborů
-    
-· v hlavní složce je zkompolovaná aplikace Radial_problem.exe, která ke spušnění vyžaduje přítomnost settings.toml, ve kterém je uloženo nastavení, výstupy pak vypisuje do složek Task 1, Task 3 a Test
+### Složka scr
+  - modul '[core.rs](src/core.rs)' -> obsahuje základní fyzikální konstanty a inicializace nastavení
+  - modul 'math.rs' -> zde jsou naprogramovány základní metody jako tvorba gridu, integrace, Runge-Kutte metoda, interpolace přirozeným kubickým splinem
+  - modul 'radialSE.rs' -> zde je metoda na řešení radiálního problému pomocí metody střelby
+  - modul 'main.rs' -> špouští jednotlivé metody a ukládá data do souborů
+
+### Aplikace
+  - v hlavní složce je zkompolovaná aplikace Radial_problem.exe, která ke spušnění vyžaduje přítomnost settings.toml, ve kterém je uloženo nastavení, výstupy pak vypisuje do složek Task 1, Task 3 a Test
   - data ve složkách Task 1, Task 2 a Test byly spuštěny s příloženým nastavením
 
 · složka Task 1 obsahuje řešení první úlohy
