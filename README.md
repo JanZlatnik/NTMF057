@@ -21,7 +21,7 @@
 
 ### Složka [`Task 3`](Task%203/) obsahuje řešení třetí úlohy
   - [`interpolation.txt`](Task%203/interpolation.txt) obsahuje potenciál a jeho aproximace přirozeným kubickým splinem s různým počtem bodů
-  - [`interpolation_enegies.txt`](Task%203/interpolation_enegies.txt) obsahuje vlastní energie pro l=0 spočítané pomocí metody střelby s přesným potenciálem a s potenciálem aproximovaným jednotlivými kubickými spliny
+  - [`interpolation_energies.txt`](Task%203/interpolation_energies.txt) obsahuje vlastní energie pro l=0 spočítané pomocí metody střelby s přesným potenciálem a s potenciálem aproximovaným jednotlivými kubickými spliny
   - [`interpolation_energies_difference.txt`](Task%203/interpolation_energies_difference.txt) obsahuje rozdíly vlastních energií pro l=0 spočítané pomocí metody střelby mezi přesným potenciálem a aproximací spliny
   - [`interpolation_ground_state_difference.txt`](Task%203/interpolation_ground_state_difference.txt) obsahuje rozdíl energie základního stavu v závislosti na počtu použitých bodů pro interpolaci splinem
 
