@@ -2,7 +2,7 @@
 ## Úloha 2: vlastní vázané stavy radiálního problému
 
 ### Složka scr
-  - modul '[core.rs](src/core.rs)' -> obsahuje základní fyzikální konstanty a inicializace nastavení
+  - modul ['core.rs'](src/core.rs) -> obsahuje základní fyzikální konstanty a inicializace nastavení
   - modul 'math.rs' -> zde jsou naprogramovány základní metody jako tvorba gridu, integrace, Runge-Kutte metoda, interpolace přirozeným kubickým splinem
   - modul 'radialSE.rs' -> zde je metoda na řešení radiálního problému pomocí metody střelby
   - modul 'main.rs' -> špouští jednotlivé metody a ukládá data do souborů
