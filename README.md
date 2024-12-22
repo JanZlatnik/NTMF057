@@ -27,7 +27,7 @@
 
 ### Složka [`Scripts`](Scripts/) obsahuje python skripty pro analýzu konvergence a tvorbu grafů
   - skript [`ConvergenceTest.py`](Scripts/ConvergenceTest.py) vytváří vždy složku s určitým nastavením a pak v ní spustí aplikaci, data pro různé běhy kvůli jejich velkému objemu nenahrávám
-  - skripty [`ConvergenceGraphNR.py`](Scripts/ConvergenceGraphNR.py) a [`ConvergenceGraphRmax.py`](Scripts/ConvergenceGraphRmax.py) z jednotlivých běhů sezbírají data z energies.txt pro l=0, porovnají je a vytvoří z nich grafy
+  - skripty [`ConvergenceGraphNR.py`](Scripts/ConvergenceGraphNR.py) a [`ConvergenceGraphRmax.py`](Scripts/ConvergenceGraphRmax.py) z jednotlivých běhů sezbírají data z energies.txt pro `l=0`, porovnají je a vytvoří z nich grafy
   - skripty [`RungeKutta.py`](Scripts/RungeKutta.py) a [`spline.py`](Scripts/spline.py) pouze vytvářejí grafy ze souborů [`RK_test.txt`](Task%201/RK_test.txt) a [`interpolation_ground_state_difference.txt`](Task%203/interpolation_ground_state_difference.txt)
 
 ### Složka [`Graphs`](Graphs/) obsahuje jednotlivé grafy
