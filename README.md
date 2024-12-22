@@ -8,7 +8,7 @@
   - modul [`main.rs`](src/main.rs) -> špouští jednotlivé metody a ukládá data do souborů
 
 ### Aplikace
-  - v hlavní složce je zkompolovaná aplikace [`Radial_problem.exe`](Radial_problem.exe), která ke spušnění vyžaduje přítomnost [`settings.toml`](settings.toml), ve kterém je uloženo nastavení, výstupy pak vypisuje do složek Task 1, Task 3 a Test
+  - v hlavní složce je zkompilovaná aplikace [`Radial_problem.exe`](Radial_problem.exe), která ke spušnění vyžaduje přítomnost [`settings.toml`](settings.toml), ve kterém je uloženo nastavení, výstupy pak vypisuje do složek Task 1, Task 3 a Test
   - data ve složkách Task 1, Task 2 a Test byly spuštěny s příloženým nastavením
 
 ### Složka [`Task 1`](Task%201/) obsahuje řešení první úlohy
