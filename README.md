@@ -8,10 +8,10 @@
   - modul [`main.rs`](src/main.rs) -> špouští jednotlivé metody a ukládá data do souborů
 
 ### Aplikace
-  - v hlavní složce je zkompolovaná aplikace [Radial_problem.exe](Radial_problem.exe), která ke spušnění vyžaduje přítomnost [settings.toml](settings.toml), ve kterém je uloženo nastavení, výstupy pak vypisuje do složek Task 1, Task 3 a Test
+  - v hlavní složce je zkompolovaná aplikace [`Radial_problem.exe`](Radial_problem.exe), která ke spušnění vyžaduje přítomnost [`settings.toml`](settings.toml), ve kterém je uloženo nastavení, výstupy pak vypisuje do složek Task 1, Task 3 a Test
   - data ve složkách Task 1, Task 2 a Test byly spuštěny s příloženým nastavením
 
-### složka [Task 1](Task1/) obsahuje řešení první úlohy
+### složka [`Task 1`](Task%1/) obsahuje řešení první úlohy
   - [`RK_test.txt`](RK_test.txt) obsahuje test konvergence Runge-Kutteových metod
   - [`N2_potential.txt`](N2_potential.txt) obsahuje výpis potenciálu pro kontrolu
   - [`energies.txt`](energies.txt) obsahuje vlastní energie pro `l=0` a `l=10`
